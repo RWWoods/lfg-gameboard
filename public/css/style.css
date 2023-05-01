@@ -1,24 +1,46 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+header {
+  padding: 20px;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+h2 {
+  text-align: center;
+  margin: 30px;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+h4 {
+  display: block;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.game-card a {
+  font-size: 200%;
+  padding-left: 30px;
+}
+
+.game-card h4 {
+  padding-left: 30px;
+}
+
+.top-posts {
+  margin: 10px;
+  margin-left: 75px;
+  border: 2px solid black;
+}
+
+.top-posts li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 125%;
+}
+
+.game-card {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+}
+
+.game-card p {
+  margin-left: 20px;
+  font-style: italic;
+  font-size: 80%;
 }
