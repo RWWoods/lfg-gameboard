@@ -1,32 +1,29 @@
+/* CSS universal properties */
+
 header {
   padding: 20px;
 }
 
 h2 {
   text-align: center;
-  margin: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 h4 {
   display: block;
 }
 
-.game-card a {
-  font-size: 200%;
-  padding-left: 30px;
-}
 
-.game-card h4 {
-  padding-left: 30px;
-}
+/* CSS properties for home page */
 
-.top-posts {
+#top-posts {
   margin: 10px;
-  margin-left: 75px;
+  margin-left: 50px;
   border: 2px solid black;
 }
 
-.top-posts li {
+#top-posts li {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 125%;
@@ -43,4 +40,37 @@ h4 {
   margin-left: 20px;
   font-style: italic;
   font-size: 80%;
+}
+
+.game-card a {
+  font-size: 200%;
+  padding-left: 30px;
+}
+
+.game-card h4 {
+  padding-left: 30px;
+}
+
+/* CSS properties for game-specific pages */
+
+#game-stats, #related-games  {
+  margin: 10px 20px 10px 20px;
+  border: 2px solid black;
+  height: 350px;
+}
+
+#game-data {
+  height: 725px
+}
+
+.forum-section {
+  border: 2px solid black;
+  margin: 10px 20px 10px 40px;
+  background: slategray;
+}
+
+.forum-post {
+  background-color: lightgray;
+  margin: 1px;
+  border: 1px solid black;
 }
