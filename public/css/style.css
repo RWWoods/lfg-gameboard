@@ -1,7 +1,13 @@
 /* CSS universal properties */
+* {
+  font-family: 'Quicksand', sans-serif;
+}
 
 header {
   padding: 20px;
+  background-image: url('../../assets/images/mateo-nCU4yq5xDEQ-unsplash\ \(1\).jpg');
+  height: 125px;
+  color: white;
 }
 
 h2 {
@@ -18,15 +24,17 @@ h4 {
 /* CSS properties for home page */
 
 #top-posts {
-  margin: 10px;
-  margin-left: 50px;
+  margin: 10px 20px 10px 20px;
   border: 2px solid black;
+  background: slategray;
+  border-radius: 5px;
 }
 
 #top-posts li {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 125%;
+  background: slategray;
 }
 
 .game-card {
@@ -34,21 +42,23 @@ h4 {
   margin-left: 10px;
   margin-bottom: 10px;
   border: 2px solid black;
+  border-radius: 5px;
 }
 
 .game-card p {
-  margin-left: 20px;
+  margin-left: 0px;
   font-style: italic;
   font-size: 80%;
+  padding-left: 10px;
 }
 
 .game-card a {
   font-size: 200%;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 .game-card h4 {
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 /* CSS properties for game-specific pages */
@@ -57,6 +67,8 @@ h4 {
   margin: 10px 20px 10px 20px;
   border: 2px solid black;
   height: 350px;
+  background: slategray;
+  border-radius: 5px;
 }
 
 #game-data {
@@ -67,10 +79,18 @@ h4 {
   border: 2px solid black;
   margin: 10px 20px 10px 40px;
   background: slategray;
+  border-radius: 5px;
 }
 
-.forum-post {
+/* .forum-post {
   background-color: lightgray;
   margin: 1px;
   border: 1px solid black;
+  border-radius: 5px;
+} */
+
+.forum-post {
+  background-color: lightgray;
+  border-bottom: 1px solid darkgray;
+  margin-left: 4px;
 }
