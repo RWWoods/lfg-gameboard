@@ -1,0 +1,32 @@
+var RAWGAPIKey ="f52c05a92ae849e584adebbb8e0dbe2a";
+
+var RAWGQueryURL = "https://api.rawg.io/api/games?key=" +RAWGAPIKey+ "";
+
+
+// event listener to get the info
+
+
+$("#formSubmit").on("submit", function (e) {
+    e.preventDefault();
+// # references ID in HTML
+    var searchResult = $("#search").val();
+    getSearch(searchResult);
+    console.log(searchResult);
+})
+
+
+function getSearch(search) {
+    fetch(`https://api.rawg.io/api/games?search=${search}key=${RAWGAPIKey}`)
+    .then (function (res) {
+        return res.json();
+    })
+    .then(function (results) {
+        console.log(results);
+            var name = results.name
+            var image = results.background_image
+            var releaseDate = results.released
+            var platforms = results.platform.name
+        console.log(name, image, releaseDate,);
+        console.log(platforms);
+    })
+}
