@@ -5,9 +5,12 @@
 
 header {
   padding: 20px;
-  background-image: url('../../assets/images/mateo-nCU4yq5xDEQ-unsplash\ \(1\).jpg');
   height: 125px;
   color: white;
+}
+
+h1 {
+  font-size: 400%;
 }
 
 h2 {
@@ -26,7 +29,7 @@ h4 {
 #top-posts {
   margin: 10px 20px 10px 20px;
   border: 2px solid black;
-  background: slategray;
+  background: lightgray;
   border-radius: 5px;
 }
 
@@ -34,7 +37,7 @@ h4 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 125%;
-  background: slategray;
+  background: lightgray;
 }
 
 .game-card {
@@ -43,6 +46,7 @@ h4 {
   margin-bottom: 10px;
   border: 2px solid black;
   border-radius: 5px;
+  background: lightgray;
 }
 
 .game-card p {
@@ -64,15 +68,11 @@ h4 {
 /* CSS properties for game-specific pages */
 
 
-body {
-  background-image: url('../../assets/images/wooden-floor-background.jpg');
-}
-
 #game-stats, #related-games  {
   margin: 10px 20px 10px 20px;
   border: 2px solid black;
   height: 350px;
-  background: slategray;
+  background: #955C43;
   border-radius: 5px;
 }
 
@@ -83,14 +83,75 @@ body {
 .forum-section {
   border: 2px solid black;
   margin: 10px 20px 10px 40px;
-  background: slategray;
+  background: #955C43;
   border-radius: 5px;
 }
 
-
 .forum-post {
-  background-color: lightgray;
-  margin: 1px;
-  border: 1px solid black;
+  background-color: #DFC69B;
+  margin: 3px;
   border-radius: 5px;
+}
+
+/* CSS properties for post pages */
+
+#create-comment-button {
+  border: 2px solid black;
+  margin: 10px 20px 10px 20px;
+  background: #955C43;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#post-stats {
+  border: 2px solid black;
+  margin: 10px 20px 10px 40px;
+  background: #955C43;
+  border-radius: 5px;
+}
+
+#post-data {
+  margin: 10px 5px 10px 5px;
+  border-radius: 5px;
+}
+
+.post-section {
+  border: 2px solid black;
+  margin: 10px 0px 10px 40px;
+  background: #955C43;
+  border-radius: 5px;
+}
+
+#post-display {
+  margin: 10px 20px 10px 0px;
+  background: #DFC69B;
+  border-radius: 5px;
+  height: 300px
+}
+
+#comments-section {
+
+  margin: 10px 20px 10px 0px;
+  background: #DFC69B;
+  border-radius: 5px;
+}
+
+.comment-block {
+  background-color: #DFC69B;
+  margin: 10px 5px 10px 5px;
+  border-radius: 5px;
+}
+
+#comment-form {
+  margin: 10px 20px 10px 0px;
+  border-radius: 5px;
+  background: #DFC69B;
+  font-weight: 700;
+}
+
+#post-form {
+  margin: 10px 20px 10px 0px;
+  border-radius: 5px;
+  background: #DFC69B;
+  font-weight: 700;
 }
