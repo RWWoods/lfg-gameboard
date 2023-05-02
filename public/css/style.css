@@ -1,24 +1,96 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+/* CSS universal properties */
+* {
+  font-family: 'Quicksand', sans-serif;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+header {
+  padding: 20px;
+  background-image: url('../../assets/images/mateo-nCU4yq5xDEQ-unsplash\ \(1\).jpg');
+  height: 125px;
+  color: white;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+h2 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+h4 {
+  display: block;
+}
+
+
+/* CSS properties for home page */
+
+#top-posts {
+  margin: 10px 20px 10px 20px;
+  border: 2px solid black;
+  background: slategray;
+  border-radius: 5px;
+}
+
+#top-posts li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 125%;
+  background: slategray;
+}
+
+.game-card {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.game-card p {
+  margin-left: 0px;
+  font-style: italic;
+  font-size: 80%;
+  padding-left: 10px;
+}
+
+.game-card a {
+  font-size: 200%;
+  padding-left: 10px;
+}
+
+.game-card h4 {
+  padding-left: 40px;
+}
+
+/* CSS properties for game-specific pages */
+
+
+body {
+  background-image: url('../../assets/images/wooden-floor-background.jpg');
+}
+
+#game-stats, #related-games  {
+  margin: 10px 20px 10px 20px;
+  border: 2px solid black;
+  height: 350px;
+  background: slategray;
+  border-radius: 5px;
+}
+
+#game-data {
+  height: 725px
+}
+
+.forum-section {
+  border: 2px solid black;
+  margin: 10px 20px 10px 40px;
+  background: slategray;
+  border-radius: 5px;
+}
+
+
+.forum-post {
+  background-color: lightgray;
+  margin: 1px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
