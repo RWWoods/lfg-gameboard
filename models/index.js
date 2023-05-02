@@ -1,5 +1,23 @@
 const User = require('./User');
-const Project = require('./Project');
+const ForumPost = require('./forumPost');
 
 
-module.exports = { User, Project };
+ForumPost.belongsTo(User, {
+    foreignKey: 'user_id',
+});
+User.hasMany(ForumPost, {
+    foreignKey: 'user_id',
+});
+Game.belongsToMany(Tag, {
+    through: {
+        model: GameTag,
+    },
+});
+Tag.belongsToMany(Game, {
+
+    through: {
+        model: GameTag,
+    },
+
+});
+module.exports = { User, ForumPost };
