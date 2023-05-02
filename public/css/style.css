@@ -28,8 +28,7 @@ h4 {
 
 #top-posts {
   margin: 10px 20px 10px 20px;
-  border: 2px solid black;
-  background: lightgray;
+  background: white;
   border-radius: 5px;
 }
 
@@ -37,16 +36,15 @@ h4 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 125%;
-  background: lightgray;
+  background: white;
 }
 
 .game-card {
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
-  border: 2px solid black;
   border-radius: 5px;
-  background: lightgray;
+  background: white;
 }
 
 .game-card p {
@@ -69,20 +67,17 @@ h4 {
 
 
 #game-stats, #related-games  {
-  margin: 10px 20px 10px 20px;
+ 
   border: 2px solid black;
   height: 350px;
   background: #955C43;
   border-radius: 5px;
-}
-
-#game-data {
-  height: 725px
+  margin: 10px;
+  padding: 10px;
 }
 
 .forum-section {
   border: 2px solid black;
-  margin: 10px 20px 10px 40px;
   background: #955C43;
   border-radius: 5px;
 }
@@ -93,15 +88,18 @@ h4 {
   border-radius: 5px;
 }
 
-/* CSS properties for post pages */
-
-#create-comment-button {
+#create-post-button {
   border: 2px solid black;
-  margin: 10px 20px 10px 20px;
+  margin: 10px;
   background: #955C43;
   border-radius: 5px;
   text-align: center;
+  width: 95%
 }
+
+/* CSS properties for post pages */
+
+
 
 #post-stats {
   border: 2px solid black;
@@ -154,4 +152,25 @@ h4 {
   border-radius: 5px;
   background: #DFC69B;
   font-weight: 700;
+}
+
+
+/* CSS properties for login page */
+
+#login-request {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#login-form  {
+  padding: 20px;
+}
+
+#create-form {
+  padding: 20px;
+}
+
+#create-request {
+  border-radius: 5px;
+  margin: 10px;
 }

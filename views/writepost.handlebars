@@ -5,17 +5,17 @@
   
   <main class = 'row'>
 
-      <div class = 'container col-2' id = 'post-stats'>
+      <div class = 'col-2' id = 'post-stats'>
         <h2>This Post</h2>
           <div class = 'container row' id = 'post-data'>
-              <p>Created By: USERNAME </p>
-              <p>Created On: DATE </p>
-              <p>Topic: GAME NAME </p>
+              <p>Created By: {{username}} </p>
+              <p>Created On: {{creation_date}} </p>
+              <p>Topic: {{game_title}} </p>
           </div>
       </div>
   
   <div class = 'col-9 post-section'>
-    <h2>POST TITLE</h2>
+    <h2>{{post_title}}</h2>
     <div class="form-group row" id = 'post-form'>
       <label for="exampleFormControlTextarea1">Write Your Post Here</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
