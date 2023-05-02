@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class forumPost extends Model { }
+class ForumPost extends Model { }
 
-forumPost.init(
+ForumPost.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -22,7 +22,7 @@ forumPost.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'User',
                 key: 'id',
             },
         },
@@ -33,11 +33,11 @@ forumPost.init(
         game_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'game',
+                model: 'Game',
                 key: 'id',
             },
         },
     }
 )
 
-module.exports = forumPost;
+module.exports = ForumPost;
