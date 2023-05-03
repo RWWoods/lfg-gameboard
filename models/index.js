@@ -1,5 +1,5 @@
 const User = require('./User');
-const ForumPost = require('./banana');
+const ForumPost = require('./ForumPost');
 const Game = require('./Game');
 const Tag = require('./Tag');
 const GameTag = require('./gameTag')
