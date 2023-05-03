@@ -6,10 +6,10 @@ const GameTag = require('./gameTag')
 const Comment = require('./Comment')
 
 ForumPost.belongsTo(User, {
-    foreignKey: 'User_id',
+    foreignKey: 'user_id',
 });
 User.hasMany(ForumPost, {
-    foreignKey: 'User_id',
+    foreignKey: 'user_id',
 });
 Game.belongsToMany(Tag, {
     through: {
@@ -32,4 +32,4 @@ ForumPost.hasMany(Comment, {
     foreignKey: 'ForumPost_id',
 });
 
-module.exports = { User, ForumPost, Tag, Game, Comment };
+module.exports = { User, ForumPost, Tag, Game, Comment, GameTag };

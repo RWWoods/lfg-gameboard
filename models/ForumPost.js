@@ -22,7 +22,7 @@ ForumPost.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
+                model: 'user',
                 key: 'id',
             },
         },
@@ -33,7 +33,7 @@ ForumPost.init(
         game_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'Game',
+                model: 'game',
                 key: 'id',
             },
         },

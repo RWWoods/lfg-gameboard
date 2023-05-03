@@ -3,23 +3,19 @@ const { Game } = require('../models')
 const gameData = [
     {
         title: 'Pokemon GO',
-        similar_games: ['Ingress Prime', 'Jurrassic World Alive', 'Pikmin Bloom'],
-        tag_id: 1,
+        similar_games: 'Ingress Prime',
     },
     {
         title: 'Destiny 2',
-        similar_games: ['Warframe', 'Apex Legends', 'Anthem'],
-        tag_id: [2, 3,],
+        similar_games: 'Warframe',
     },
     {
         title: 'World of Warcraft',
-        similar_games: ['Final Fantasy XIV', 'Runescape', 'Destiny 2'],
-        tag_id: [2, 3],
+        similar_games: 'Final Fantasy XIV', 
     },
     {
         title: 'Final Fantasy XIV',
-        similar_games: ['World of Warcraft', 'Runescape', 'Destiny 2'],
-        tag_id:[2, 4],
+        similar_games: 'World of Warcraft',
     },
 ];
 
