@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const {ForumPost, User, } = require('../models')
+
 router.get('/', async (req, res) => {
     try {
 const forumData = await ForumPost.findAll({
+
     include: [
         {
             model: User,
@@ -18,4 +20,5 @@ res.render('homepage', {
         res.status(500).json(err);
     }
 });
+
 module.exports = router
