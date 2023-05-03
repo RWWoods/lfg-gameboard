@@ -22,4 +22,7 @@ Tag.belongsToMany(Game, {
     },
 
 });
+
+// TODO add comment relationships
+
 module.exports = { User, ForumPost, Tag, Game };
