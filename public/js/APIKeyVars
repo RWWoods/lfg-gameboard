@@ -3,6 +3,8 @@ var RAWGAPIKey ="f52c05a92ae849e584adebbb8e0dbe2a";
 var RAWGQueryURL = "https://api.rawg.io/api/games?key=" +RAWGAPIKey+ "";
 
 
+// event listener to get the info
+
 
 $("#formSubmit").on("submit", function (e) {
     e.preventDefault();
