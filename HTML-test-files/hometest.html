@@ -25,33 +25,33 @@
         <div class='col-2' id='top-posts'>
             <h2>Top Posts</h2>
             <ul>
-                <li>{{post_name}}</li>
-                <li>{{post_name}}</li>
-                <li>{{post_name}}</li>
-                <li>{{post_name}}</li>
+                <li>{{forumpost.title}}</li>
+                <li>{{forumpost.title}}</li>
+                <li>{{forumpost.title}}</li>
+                <li>{{forumpost.title}}</li>
             </ul>
         </div>
 
         <div class='col-9' id='game-section'>
             <div class='row game-card'>
                 <a href="PLACEHOLDER URL">Pokémon GO</a>
-                <h4>{{post_name}}</h4>
-                <p>Posted {{creation_date}} by {{username}}</p>
+                <h4>{{forumpost.title}}</h4>
+                <p>Posted {{created_at}} by {{user.name}}</p>
             </div>
             <div class='row game-card'>
                 <a href="PLACEHOLDER URL">Destiny/Destiny 2</a>
-                <h4>{{post_name}}</h4>
-                <p>Posted {{creation_date}} by {{username}}</p>
+                <h4>{{forumpost.title}}</h4>
+                <p>Posted {{created_at}} by {{user.name}}</p>
             </div>
             <div class='row game-card'>
                 <a href="PLACEHOLDER URL">World of Warcraft</a>
-                <h4>{{post_name}}</h4>
-                <p>Posted {{creation_date}} by {{username}}</p>
+                <h4>{{forumpost.title}}</h4>
+                <p>Posted {{created_at}} by {{user.name}}</p>
             </div>
             <div class='row game-card'>
                 <a href="PLACEHOLDER URL">Final Fantasy XIV</a>
-                <h4>{{post_name}}</h4>
-                <p>Posted {{creation_date}} by {{username}}</p>
+                <h4>{{forumpost.title}}</h4>
+                <p>Posted {{created_at}} by {{user.name}}</p>
             </div>
         </div>
     </main>

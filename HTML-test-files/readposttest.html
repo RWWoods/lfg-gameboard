@@ -24,21 +24,21 @@
     <div class='col-2' id='post-stats'>
       <h2>This Post</h2>
       <div class= id='post-data'>
-        <p>Created By: USERNAME </p>
-        <p>Created On: DATE </p>
-        <p>Topic: GAME NAME </p>
+        <p>Created By: {{user.name}} </p>
+        <p>Created On: {{created_at}} </p>
+        <p>Topic: {{Game.title}} </p>
       </div>
     </div>
 
     <div class='col-9 post-section'>
-      <h2>POST TITLE</h2>
+      <h2>{{ForumPost.title}}</h2>
       <div id='post-display'>
         <p>OMG look at this amazing post I just made!</p>
       </div>
       <div id='comments-section'>
-        <p class='comment-block'><span style="font-weight: 700">USER Wrote: </span> Wow man, great post. 10/10!</p>
-        <p class='comment-block'><span style="font-weight: 700">USER Wrote: </span> You suck</p>
-        <p class='comment-block'><span style="font-weight: 700">USER Wrote: </span> All right all right all right</p>
+        <p class='comment-block'><span style="font-weight: 700">{{user.name}} Wrote: </span> {{comment.body}}</p>
+        <p class='comment-block'><span style="font-weight: 700">{{user.name}} Wrote:</span> {{comment.body}}</p>
+        <p class='comment-block'><span style="font-weight: 700">{{user.name}} Wrote:</span> {{comment.body}}</p>
       </div>
 
       <div class="form-group" id='comment-form'>
