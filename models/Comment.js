@@ -26,6 +26,13 @@ Comment.init(
             type: DataTypes.TIMESTAMP,
             allowNull: false,
         },
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'comment',
     }
 )
 

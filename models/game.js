@@ -12,7 +12,7 @@ Game.init(
             autoIncrement: true
         },
         title: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         similar_games: {
@@ -32,7 +32,7 @@ Game.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'tag',
+        modelName: 'game',
     }
 );
 
