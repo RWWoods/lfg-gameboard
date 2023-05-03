@@ -19,13 +19,6 @@ Game.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        tag_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'tag',
-                key: 'id',
-            },
-        }
     },
     {
         sequelize,

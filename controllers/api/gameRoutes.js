@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Game, forumPost } = require('../models');
 
-router.get('/game/:id', async (req, res) => {
+router.get('/games/:id', async (req, res) => {
     try {
       const dbGameData = await Game.findByPk(req.params.id, {
         include: [
