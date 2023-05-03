@@ -52,8 +52,11 @@
       
       <!-- each -->
       <div class='forum-post'>
-        <h4>{{post_title}}</h4>
-        <p>Posted {{creation_date}} by {{username}}</p>
+        <!-- changed post_title to reference ForumPost.js model... (Forumpost.Title) -->
+        <h4>{{forumpost.title}}</h4>
+        <!-- changed creation_date to reference forumPost.js model... (Forumpost.created_at)-->
+        <!-- Changed username to reference user.js model (user.name)-->
+        <p>Posted {{created_at}} by {{user.name}}</p>
       </div>
       
     </div>

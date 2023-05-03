@@ -2,7 +2,7 @@ var RAWGAPIKey ="f52c05a92ae849e584adebbb8e0dbe2a";
 
 var RAWGQueryURL = "https://api.rawg.io/api/games?key=" +RAWGAPIKey+ "";
 
-var test var
+
 // event listener to get the info
 
 
