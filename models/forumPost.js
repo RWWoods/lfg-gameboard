@@ -12,7 +12,7 @@ ForumPost.init(
             autoIncrement: true
         },
         title: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         },
         body: {
@@ -27,7 +27,7 @@ ForumPost.init(
             },
         },
         created_at: {
-            type: DataTypes.TIMESTAMP,
+            type: DataTypes.DATE,
             allowNull: false,
         },
         game_id: {
@@ -37,6 +37,13 @@ ForumPost.init(
                 key: 'id',
             },
         },
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'forumPost',
     }
 )
 

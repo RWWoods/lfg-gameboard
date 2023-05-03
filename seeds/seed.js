@@ -12,9 +12,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const forumPost of forumPosts) {
-    await Project.create({
-      ...forumPost,
+  for (const post of forumPosts) {
+    await forumPost.create({
+      ...post,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
