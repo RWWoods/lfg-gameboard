@@ -23,7 +23,7 @@ Comment.init(
             },
         },
         created_at: {
-            type: DataTypes.TIMESTAMP,
+            type: DataTypes.DATE,
             allowNull: false,
         },
     },
@@ -36,4 +36,4 @@ Comment.init(
     }
 )
 
-module.exports = ForumPost;
+module.exports = Comment;

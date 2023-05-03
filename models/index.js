@@ -1,14 +1,15 @@
 const User = require('./User');
-const ForumPost = require('./forumPost');
-const Game = require('./game');
-const Tag = require('./tag');
+const ForumPost = require('./ForumPost');
+const Game = require('./Game');
+const Tag = require('./Tag');
 const GameTag = require('./gameTag')
+const Comment = require('./Comment')
 
 ForumPost.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'User_id',
 });
 User.hasMany(ForumPost, {
-    foreignKey: 'user_id',
+    foreignKey: 'User_id',
 });
 Game.belongsToMany(Tag, {
     through: {
@@ -23,6 +24,12 @@ Tag.belongsToMany(Game, {
 
 });
 
-// TODO add comment relationships
+Comment.belongsTo(ForumPost, {
+    foreignKey: 'ForumPost_id',
+});
 
-module.exports = { User, ForumPost, Tag, Game };
+ForumPost.hasMany(Comment, {
+    foreignKey: 'ForumPost_id',
+});
+
+module.exports = { User, ForumPost, Tag, Game, Comment };
