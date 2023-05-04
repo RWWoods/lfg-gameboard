@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {ForumPost, User, } = require('../models')
 
+// HOME PAGE GET ROUTE
 router.get('/', async (req, res) => {
     try {
 const forumData = await ForumPost.findAll({
@@ -22,7 +23,65 @@ res.render('homepage', {
     }
 });
 
+// GAMES FORUM PAGE GET ROUTE
+router.get('/games', async (req, res) => {
+    try {
+const forumData = await ForumPost.findAll({
 
+    include: [
+        {
+            model: User,
+        }
+    ]
+});
+
+const forum= forumData.map((post) => post.get({ plain: true}));
+res.render('gamepage', {
+    forum,
+    logged_in: req.session.logged_in
+});
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+// READ POST PAGE GET ROUTE
+router.get('/games/post/:id', async (req, res) => {
+    try {
+const forumData = await ForumPost.findByPk(req.params.id, {
+
+})
+const forum= forumData.get({ plain: true});
+res.render('readpost', {
+    forum,
+    logged_in: req.session.logged_in
+});
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+// WRITE POST PAGE GET ROUTE
+router.get('/games/post/newpost', async (req, res) => {
+    try {
+const forumData = await ForumPost.findAll({
+
+    include: [{model: User}],
+});
+const forum= forumData.map((post) => post.get({ plain: true}));
+res.render('writepost', {
+    forum,
+    logged_in: req.session.logged_in
+});
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+// LOGIN PAGE GET ROUTE
 router.get('/login', async (req, res) => {
     try {
         res.render("login")
@@ -30,5 +89,26 @@ router.get('/login', async (req, res) => {
         console.log(err);
         res.status(500).json(err);
     }
-})
+});
+
+// router.get('/:id', async (req, res) => {
+//     try {
+//       const dbForumData = await ForumPost.findAll({
+//       include: [{ model: ForumPost }],
+//     });
+//         const forum = dbForumData.map((post) => post.get({ plain: true}));
+        
+  
+//         res.render('gamepage', {
+//             forum,
+//             logged_in: req.session.logged_in,
+//         });
+//             } catch (err) {
+//                 console.log(err);
+//                 res.status(500).json(err);
+//             }
+//         });
+
+        
+
 module.exports = router;
