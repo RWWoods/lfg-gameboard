@@ -11,25 +11,27 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-// const sess = {
-//   secret: 'Super secret secret',
-//   cookie: {
-//     maxAge: 300000,
-//     httpOnly: true,
-//     secure: false,
-//     sameSite: 'strict',
-//   },
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
+const sess = {
+  secret: process.env.SECRET,
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
 
-// app.use(session(sess));
+app.use(session(sess));
 
-
+// Added this per Fred's guidance/the mini project
+app.engine('handlebars', hbs.engine);
+// -----------------------------------------------
 
 app.set('view engine', 'handlebars');
 
