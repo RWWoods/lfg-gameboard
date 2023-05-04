@@ -1,9 +1,14 @@
 const router = require('express').Router();
 
-const apiRoutes = require('./api');
-const homeRoutes = require('./homeRoutes');
+const userRoutes = require('./api/userRoutes');
+const gameRoutes = require('./api/gameRoutes');
+const postRoutes = require('./api/postRoutes');
+const commentRoutes = require('./api/commentRoutes');
 
-router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
+router.use('/users', userRoutes);
+router.use('/games', gameRoutes);
+router.use('/posts', postRoutes);
+router.use('/comments', commentRoutes);
+
 
 module.exports = router;

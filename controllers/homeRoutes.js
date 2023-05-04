@@ -21,4 +21,4 @@ res.render('homepage', {
     }
 });
 
-module.exports = router
+module.exports = router;

@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { forumPost, Comment } = require('../models');
+const { forumPost, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/forumPost/:id', async (req, res) => {
     try {
@@ -37,3 +38,5 @@ router.get('/forumPost/:id', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+  module.exports = router;

@@ -1,6 +1,29 @@
 const router = require('express').Router();
-const { ForumPost } = require('../../models');
+const { ForumPost, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+router.get('/:id', async (req, res) => {
+  try {
+    const dbPostData = await ForumPost.findByPk(req.params.id, {
+        include: [
+          { 
+            model: Comment,
+            attributes: [
+              'id',
+              'body',
+              'user_id',
+              'created_at',
+            ]
+          }]
+      });
+
+    res.status(200).json(dbPostData);
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err);
+  }
+})
+
 
 router.post('/', withAuth, async (req, res) => {
   try {
