@@ -1,24 +1,32 @@
 <main class='row'>
-{{log this}}
+  {{!-- {{log this}} --}}
   <div class='col-2' id='post-stats'>
-    <h2>This Post</h2>
+    <h2>Forum Rules</h2>
     <div class='container row' id='post-data'>
-      <p>Created By: {{user.name}} </p>
-      <p>Created On: {{created_at}} </p>
-      <p>Topic: {{game.title}} </p>
+      <ol>
+        <li>No spam or advertising</li>
+        <li>No offensive posts, links or images</li>
+        <li>Be respectful to ALL MEMBERS</li>
+        <li>Before asking a question, do a search to see if it has already been answered</li>
+        <li>Do not share any private data on these servers</li>
+      </ol>
 
-      
+
     </div>
   </div>
 
   <div class='col-9 post-section'>
-    <h2>{{ForumPost.title}}</h2>
-    <div class="form-group row" id='post-form'>
+
+    <form class="form-group row" id='post-form'>
+      <label for="new-post-title">Post Title</label>
+      <textarea class="form-control" id="new-post-title-field" rows="1"></textarea>
       <label for="new-post-area">Write Your Post Here</label>
       <textarea class="form-control" id="new-post-entry-field" rows="3"></textarea>
       <button type="button" class="btn btn-secondary btn-sm" id="create-post-button"
         style="width: 200px; text-align: center; margin: 5px">Post to the Forum</button>
-    </div>
+    </form>
 
   </div>
+
 </main>
+<script src="js/post.js"></script>
