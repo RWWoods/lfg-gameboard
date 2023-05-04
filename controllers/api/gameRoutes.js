@@ -3,23 +3,14 @@ const { Game, ForumPost } = require('../../models');
 
 router.get('/:id', async (req, res) => {
   try {
-    const dbGameData = await Game.findByPk(req.params.id, {
-        include: [
-          { 
-            model: ForumPost,
-            attributes: [
-              'id',
-              'title',
-              'body',
-              'user_id',
-              'created_at',
-            ]
-          }]
-      });
-
-    res.status(200).json(dbGameData);
+    const dbGameData = await ForumPost.findAll()
+    const posts = dbGameData.map((post) => post.get({ plain: true }))
+    res.render("game", {
+      posts
+    })
   } catch (err) {
     res.status(500).json(err);
+    console.log(err);
   }
 })
 
