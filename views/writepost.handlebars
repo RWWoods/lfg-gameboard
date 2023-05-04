@@ -1,5 +1,5 @@
 <main class='row'>
-  {{log this}}
+  {{!-- {{log this}} --}}
   <div class='col-2' id='post-stats'>
     <h2>Forum Rules</h2>
     <div class='container row' id='post-data'>
@@ -16,14 +16,17 @@
   </div>
 
   <div class='col-9 post-section'>
-    <div class="form-group row" id='post-form'>
+
+    <form class="form-group row" id='post-form'>
       <label for="new-post-title">Post Title</label>
       <textarea class="form-control" id="new-post-title-field" rows="1"></textarea>
       <label for="new-post-area">Write Your Post Here</label>
       <textarea class="form-control" id="new-post-entry-field" rows="3"></textarea>
       <button type="button" class="btn btn-secondary btn-sm" id="create-post-button"
         style="width: 200px; text-align: center; margin: 5px">Post to the Forum</button>
-    </div>
+    </form>
 
   </div>
+
 </main>
+<script src="js/post.js"></script>
