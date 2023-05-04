@@ -24,7 +24,6 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPost = await ForumPost.create({
