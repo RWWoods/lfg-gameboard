@@ -32,7 +32,6 @@ ForumPost.hasMany(Comment, {
     foreignKey: 'ForumPost_id',
 });
 
-// -----added the forumpost to game relationship--------
 Game.hasMany(ForumPost, {
     foreignKey: 'game_id'
 });
@@ -40,6 +39,5 @@ Game.hasMany(ForumPost, {
 ForumPost.belongsTo(Game, {
     foreignKey: 'game_id,'
 });
-// -------------------------------------------------------
 
 module.exports = { User, ForumPost, Tag, Game, Comment, GameTag };

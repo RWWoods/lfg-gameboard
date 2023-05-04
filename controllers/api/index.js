@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 const userRoutes = require('./userRoutes');
-const gameRoutes = require('./gameRoutes');
+const gameRoutes = require('./postRoutes');
 const postRoutes = require('./postRoutes');
 const commentRoutes = require('./commentRoutes');
 
