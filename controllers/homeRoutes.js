@@ -1,22 +1,13 @@
 const router = require('express').Router();
-const {ForumPost, User, } = require('../models')
+const { ForumPost, User, } = require('../models')
 
 // HOME PAGE GET ROUTE
 router.get('/', async (req, res) => {
     try {
-const forumData = await ForumPost.findAll({
 
-    include: [
-        {
-            model: User,
-        }
-    ]
-})
-const forum= forumData.map((post) => post.get({ plain: true}));
-res.render('homepage', {
-    forum,
-    logged_in: req.session.logged_in
-});
+        res.render('homepage', {
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -26,20 +17,16 @@ res.render('homepage', {
 // GAMES FORUM PAGE GET ROUTE
 router.get('/games', async (req, res) => {
     try {
-const forumData = await ForumPost.findAll({
+        const forumData = await ForumPost.findAll({
 
-    include: [
-        {
-            model: User,
-        }
-    ]
-});
+            include: [{model: User}],
+        });
 
-const forum= forumData.map((post) => post.get({ plain: true}));
-res.render('gamepage', {
-    forum,
-    logged_in: req.session.logged_in
-});
+        const forum = forumData.map((post) => post.get({ plain: true }));
+        res.render('gamepage', {
+            forum,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -47,16 +34,16 @@ res.render('gamepage', {
 });
 
 // READ POST PAGE GET ROUTE
-router.get('/games/post/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     try {
-const forumData = await ForumPost.findByPk(req.params.id, {
-
-})
-const forum= forumData.get({ plain: true});
-res.render('readpost', {
-    forum,
-    logged_in: req.session.logged_in
-});
+        const forumData = await ForumPost.findByPk(req.params.id, {
+            include: [{model: User}],
+        })
+        const forum = forumData.get({ plain: true });
+        res.render('readpost', {
+            ...forum,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -64,23 +51,17 @@ res.render('readpost', {
 });
 
 // WRITE POST PAGE GET ROUTE
-router.get('/games/post/newpost', async (req, res) => {
+router.get('/newpost', async (req, res) => {
     try {
-const forumData = await ForumPost.findAll({
 
-    include: [{model: User}],
-});
-const forum= forumData.map((post) => post.get({ plain: true}));
-res.render('writepost', {
-    forum,
-    logged_in: req.session.logged_in
-});
+        res.render('writepost', {
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
-
 // LOGIN PAGE GET ROUTE
 router.get('/login', async (req, res) => {
     try {
@@ -97,8 +78,8 @@ router.get('/login', async (req, res) => {
 //       include: [{ model: ForumPost }],
 //     });
 //         const forum = dbForumData.map((post) => post.get({ plain: true}));
-        
-  
+
+
 //         res.render('gamepage', {
 //             forum,
 //             logged_in: req.session.logged_in,
@@ -109,6 +90,6 @@ router.get('/login', async (req, res) => {
 //             }
 //         });
 
-        
+
 
 module.exports = router;

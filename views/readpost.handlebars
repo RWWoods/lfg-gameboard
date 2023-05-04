@@ -1,11 +1,21 @@
 <main class='row'>
-{{log this}}
+  {{log this}}
   <div class='col-2' id='post-stats'>
     <h2>This Post</h2>
     <div class=id='post-data'>
       <p>Created By: {{user.name}} </p>
       <p>Created On: {{created_at}} </p>
-      <p>Topic: {{Game.title}} </p>
+      <p>Topic: {{title}} </p>
+    </div><br><br>
+    <h2>Forum Rules</h2>
+    <div class=id='post-data'>
+      <ol>
+        <li>No spam or advertising</li>
+        <li>No offensive posts, links or images</li>
+        <li>Be respectful to ALL MEMBERS</li>
+        <li>Before asking a question, do a search to see if it has already been answered</li>
+        <li>Do not share any private data on these servers</li>
+      </ol>
     </div>
   </div>
 
@@ -15,9 +25,9 @@
       <p>{{body}}</p>
     </div>
     <div id='comments-section'>
-      <p class='comment-block'><span style="font-weight: 700">{{user.name}} Wrote: </span> {{comment.body}}</p>
-      <p class='comment-block'><span style="font-weight: 700">{{user.name}} Wrote:</span> {{comment.body}}</p>
-      <p class='comment-block'><span style="font-weight: 700">{{user.name}} Wrote:</span> {{comment.body}}</p>
+      <p class='comment-block'><span style="font-weight: 700">USER Wrote:</span> {{comment.body}}</p>
+      <p class='comment-block'><span style="font-weight: 700">USER Wrote:</span> {{comment.body}}</p>
+      <p class='comment-block'><span style="font-weight: 700">USER Wrote:</span> {{comment.body}}</p>
     </div>
 
     <div class="form-group" id='comment-form'>
