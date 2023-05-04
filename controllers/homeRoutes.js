@@ -54,7 +54,7 @@ const forumData = await ForumPost.findByPk(req.params.id, {
 })
 const forum= forumData.get({ plain: true});
 res.render('readpost', {
-    ...forum,
+    forum,
     logged_in: req.session.logged_in
 });
     } catch (err) {
@@ -68,12 +68,8 @@ router.get('/games/post/newpost', async (req, res) => {
     try {
 const forumData = await ForumPost.findAll({
 
-    include: [
-        {
-            model: User,
-        }
-    ]
-})
+    include: [{model: User}],
+});
 const forum= forumData.map((post) => post.get({ plain: true}));
 res.render('writepost', {
     forum,
