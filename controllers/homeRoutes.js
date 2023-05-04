@@ -19,7 +19,7 @@ router.get('/games', async (req, res) => {
     try {
         const forumData = await ForumPost.findAll({
 
-            include: [{model: User}],
+            include: [{ model: User }],
         });
 
         const forum = forumData.map((post) => post.get({ plain: true }));
@@ -37,7 +37,7 @@ router.get('/games', async (req, res) => {
 router.get('/post/:id', async (req, res) => {
     try {
         const forumData = await ForumPost.findByPk(req.params.id, {
-            include: [{model: User}],
+            include: [{ model: User }],
         })
         const forum = forumData.get({ plain: true });
         res.render('readpost', {
@@ -55,13 +55,53 @@ router.get('/newpost', async (req, res) => {
     try {
 
         res.render('writepost', {
-            logged_in: req.session.logged_in
+            // logged_in: req.session.logged_in
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
+
+// router.get('/newpost', /* withAuth, */ async (req, res) => {
+//     try {
+//         // Find the logged in user based on the session ID
+//         const userData = await User.findByPk(req.session.id, {
+//             attributes: { exclude: ['password'] },
+//             include: [{ model: ForumPost }],
+//         });
+
+//         const user = userData.get({ plain: true });
+
+//         res.render('writepost', {
+//             ...user,
+//             logged_in: true
+//         });
+//     } catch (err) {
+//         res.status(500).json(err);
+//         console.log(err);
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // LOGIN PAGE GET ROUTE
 router.get('/login', async (req, res) => {
     try {
