@@ -16,9 +16,6 @@ router.post('/:id',  async (req, res) => {
       }
   })
 
-  const postId = post.id
-  // const postId = req.params.post_id
-
   const newComment = await Comment.create({
     
       body: req.body.content, 
