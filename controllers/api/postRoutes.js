@@ -3,25 +3,26 @@ const { ForumPost, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/:id', async (req, res) => {
-  try {
-    const dbPostData = await ForumPost.findByPk(req.params.id, {
-        include: [
-          { 
-            model: Comment,
-            attributes: [
-              'id',
-              'body',
-              'user_id',
-              'created_at',
-            ]
-          }]
-      });
+    try {
+        const postData = await Post.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ['username', 'id']
+                },
+            ],
+        })
 
-    res.status(200).json(dbPostData);
-  } catch (err) {
-    res.status(500).json(err);
-    console.log(err);
-  }
+        const posts = postData.map((post) => post.get({ plain: true }))
+
+        res.render('homepage', {
+            posts,
+            logged_in: req.session.loggedIn,
+            userId: req.session.userId
+        })
+    } catch (err) {
+        res.status(500).json(err)
+    }
 })
 
 router.post('/', withAuth, async (req, res) => {
