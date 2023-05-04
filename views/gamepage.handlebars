@@ -1,6 +1,6 @@
 <main class='row'>
   <div class='col-2' id='game-data'>
-    <a href="/newpost"><button type="button" class="btn btn-primary" id="create-post-button">🪶 Post a Comment 🪶</button></a>
+    <a href="/newpost"><button type="button" class="btn btn-primary" id="create-post-button">🪶 Write a New Post 🪶</button></a>
 
     <div id='game-stats'>
       <h2>About the Game</h2>
@@ -28,7 +28,7 @@
     {{#each forum as |post| }}
     <div class='forum-post'>
       <a href="/post/{{post.id}}"><h4>{{post.title}}</h4></a>
-      <p>{{post.content}}</p>
+      <p>Posted By: {{user.name}} on {{created_at}}</p>
     </div>
     {{/each}}
   </div>
