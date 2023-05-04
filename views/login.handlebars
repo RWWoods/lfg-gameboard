@@ -1,9 +1,4 @@
-<body style="background-image: url('../assets/images/destiny.jpg');">
-    <header>
-        <h1>Party Locator: Plan Your Next Raid</h1>
-    </header>
-
-    <main class='row' id='homepage-background' style="justify-content: center;">
+<main class='row' style="justify-content: center;">
 
 
         <div class='col-3' id='login-request' style="background-color: white">
@@ -26,9 +21,15 @@
 
         </div>
 
-        <div class='col-3' id='create-request' style="background-color: white;">
-            <h2>New to the Forum? <span style="font-weight: 700;"><br>Create an Account</span></h2>
+  <div class='col-3' id='create-request' style="background-color: white;">
+    <h2>New to the Forum? <span style="font-weight: 700;"><br>Create an Account</span></h2>
 
+    <form id="create-form">
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
             <form id="signup-form">
                 
                 <div class="mb-3">
@@ -36,6 +37,18 @@
                   <input type="input" class="form-control" id="name-signup" aria-describedby="emailHelp">
                 </div>
 
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email Address</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Email Address</label>
                     <input type="email" class="form-control" id="email-signup">
@@ -49,7 +62,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
 
-        </div>
+  </div>
 
 
     </main>
