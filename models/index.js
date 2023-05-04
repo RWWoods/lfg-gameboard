@@ -2,7 +2,7 @@ const User = require('./User');
 const ForumPost = require('./ForumPost');
 const Game = require('./Game');
 const Tag = require('./Tag');
-const GameTag = require('./gameTag')
+const GameTag = require('./GameTag')
 const Comment = require('./Comment')
 
 ForumPost.belongsTo(User, {
