@@ -6,7 +6,7 @@ const forumPostData = [
         body: "Elit ut aliquam purus sit amet luctus venenatis lectus. Augue neque gravida in fermentum et. Odio tempor orci dapibus ultrices in iaculis nunc sed. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Consectetur purus ut faucibus pulvinar elementum integer. Donec massa sapien faucibus et molestie ac feugiat. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Eu nisl nunc mi ipsum faucibus vitae aliquet nec. Nunc congue nisi vitae suscipit. Lobortis mattis aliquam faucibus purus. Congue eu consequat ac felis. Placerat vestibulum lectus mauris ultrices eros in cursus turpis. Nullam non nisi est sit amet facilisis magna etiam tempor. Tincidunt id aliquet risus feugiat.",
         user_id: 1,
         created_at: 'May 1, 2023 08:30:00',
-        game_id: 2,
+        game_id: 1,
     },
     {
         title: 'Fave build for Warlock?',

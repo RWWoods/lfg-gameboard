@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { forumPost, Comment } = require('../models');
+const { forumPost, Comment } = require('../../models');
 
 router.get('/forumPost/:id', async (req, res) => {
     try {
@@ -25,7 +25,7 @@ router.get('/forumPost/:id', async (req, res) => {
     }
   });
 
-  router.post('/', withAuth, async (req, res) => {
+  router.post('/', /* withAuth, */ async (req, res) => {
     try {
       const newComment = await Comment.create({
         ...req.body,
@@ -37,3 +37,5 @@ router.get('/forumPost/:id', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+  module.exports = router;
