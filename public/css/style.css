@@ -37,6 +37,12 @@ h4 {
   color: white;
 }
 
+#logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 #top-posts li {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -51,6 +57,7 @@ h4 {
   background: slategray;
   color: white;
   opacity: 90%;
+  height: 150px
 }
 
 .game-card p {
@@ -94,6 +101,7 @@ h4 {
 .forum-post {
   background-color: white;
   margin: 3px;
+  padding: 5px;
   border-radius: 5px;
   color: black
 }
